@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Prakhar's Notes
+
+1. `nvm` helps you to manage many versions of node on your machine
+2. to run react dev in your browser - `https://codesandbox.io/`
+3. Best way to install node is nvm. Install nvm. relaunch terminal.
+4. add `source ~/.bashrc` to your `~/.bash_profile` file
+5. `source ~/.bash_profile` in terminal to reload bash profile
+6. can use nvm then to install and “use” the node version we want.
+7. Create a new react app called monsters-rolodex - `npx create-react-app monsters-rolodex`
+8. Find the global location of a npm 
