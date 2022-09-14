@@ -6,26 +6,36 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Prakhar from state",
+      monsters: [
+        {
+          name: 'Linda',
+          id: '1231'
+        },
+        {
+          name: 'Frank',
+          id: '1232'
+        },
+        {
+          name: 'Jacky',
+          id: '1233'
+        },
+        {
+          name: 'Prakhar',
+          id: '1234'
+        }
+      ]
     };
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi {this.state.name}</p>
-          <button
-            onClick={() => {
-              // this.setState can also be called as this.setState((state, props) => {}, () => {} ); 
-              // where the second argument is the completion callback
-              this.setState({ name: "Prakhar from JS" }); // this is async for react
-            }}
-          >
-            Change name
-          </button>
-        </header>
+        {
+          this.state.monsters.map((monster) => { 
+            // key is needed by React under the hood to keep track of that element in case it needs updation
+            return <div key={monster.id}><h1>{monster.name}</h1></div>;
+           })
+        }
       </div>
     );
   }
