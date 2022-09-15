@@ -1,4 +1,5 @@
 import { Component } from "react";
+import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 
 class App extends Component {
@@ -38,13 +39,8 @@ class App extends Component {
       <div className="App">
 
         <input className='search-box' type='search' placeholder='search monsters' onChange={onSearchChange}/>
-
-        {
-          fileteredMonsters.map((monster) => { 
-            // key is needed by React under the hood to keep track of that element in case it needs updation
-            return <div key={monster.id}><h1>{monster.name}</h1></div>;
-           })
-        }
+        <CardList monsters={fileteredMonsters}/>
+        
       </div>
     );
   }
